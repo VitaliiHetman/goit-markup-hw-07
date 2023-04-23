@@ -91,6 +91,9 @@ display: none;
 .ph-container {
   display: flex;
   align-items: center;
+  margin: 0;
+  justify-content: space-between;
+
 }
 
 .page-nav {
@@ -101,29 +104,6 @@ display: none;
 .west {
   margin-right: 76px;
 }
-
-.menu {
-  display: flex;
-  align-items: center;
-}
-
-/* position: absolute;
-width: 48px;
-height: 4px;
-left: 0px;
-top: 44px;
-background: #404BBF;
-border-radius: 2px; */
-
-.menu-item:not(:last-child) {
-  margin-right: 40px;
-}
-
-.addr {
-  display: flex;
-  align-items: center;
-}
-
 .logo-left {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
@@ -143,43 +123,37 @@ border-radius: 2px; */
   color: var(--navy-blue);
 }
 
-.menu-link {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--navy-blue);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.menu {
+  display: none;
+  
 }
 
-.menu-link:active,
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--pressed-state);
+.addr{
+  display: none;
 }
 
-.contakt {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  margin-left: auto;
-}
-.current {
-  position: relative;
+.menu-open-btn{
+ 
+ border: none;
+ background-color: transparent;
+ padding: 0;
+ /* line-height: 0; */
+ /* margin-left: auto;  */
+  
 }
 
-.current:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -28px;
+.mob-menu{
+  position: fixed;
   width: 100%;
-  height: 4px;
-  border-radius: 2px;
-  background: var(--pressed-state);
+  height: 100%;
+  max-height: 796px;
+  z-index: 100;
+  top:0;
+  left: 0;
+  background-color: var(--white-background);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /* ================================Hero============================ */
@@ -378,6 +352,7 @@ letter-spacing: 0.02em;
 
 .footer-soc {
   display: block;
+  margin-bottom: 72px;
 }
 .foot-soc-list {
   display: flex;
@@ -433,6 +408,7 @@ letter-spacing: 0.02em;
 /* =====================================Footer=============================== */
 
 .background-footer {
+  display: flex;
   padding-top: 100px;
   padding-bottom: 100px;
   margin-left: auto;
@@ -440,7 +416,13 @@ letter-spacing: 0.02em;
   background-color: var(--navy-blue);
 }
 
+.foot-tel{
+  margin-bottom: 17px;
+  display: block;
+  text-align: center;
+}
 .logo-right-footer {
+  
   font-family: "Raleway", sans-serif;
   font-size: 18px;
   line-height: 1.17;
@@ -453,12 +435,14 @@ letter-spacing: 0.02em;
   letter-spacing: 0.02em;
   color: var(--light);
   max-width: 264px;
-  margin-top: 17px;
+  /* margin-top: 17px; */
+  margin-bottom: 72px;
+  width: 264px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.container-foot {
-  display: flex;
-  gap: 120px;
-}
+
 .foot-title {
   font-weight: 500;
   font-size: 16px;
@@ -466,7 +450,13 @@ letter-spacing: 0.02em;
   letter-spacing: 0.02em;
   color: var(--white-background);
   margin-bottom: 16px;
+  text-align: center;
 }
+
+.mail-footer{
+  width: 100%;
+}
+
 /* ================================Portfolio=========================================== */
 .btn-port {
   display: flex;
@@ -787,14 +777,17 @@ margin-right: 8px;
 
 
 .mail-buttom {
-display: flex;
+/* display: flex; */
+flex-wrap: wrap;
 gap: 24px;
-align-items: center;
+/* align-items: center; */
 }
 
 .footer-form-input-wrap{  
   display: block;
-  position: relative;}
+  position: relative;
+margin-bottom: 16px;
+}
 
 .footer-form-input-desc {
   display: block;
@@ -824,7 +817,8 @@ align-items: center;
   margin-bottom: 16px;
 } */
 .footer-form-input {
-  width: 264px;
+  /* width: 264px; */
+  width: 100%;
   height: 40px;
   border: 1px solid var(--white-background);
   border-radius: 4px;
@@ -854,6 +848,8 @@ align-items: center;
   color: var(--white-background);
   background-color: var(--primary-brand);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer-form-submit,
@@ -876,6 +872,73 @@ align-items: center;
 width: 768px;
 align-items: center;
   }
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* position: absolute;
+  width: 48px;
+  height: 4px;
+  left: 0px;
+  top: 44px;
+  background: #404BBF;
+  border-radius: 2px; */
+  
+  .menu-item:not(:last-child) {
+    margin-right: 40px;
+  }
+  
+  .addr {
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  
+  .menu-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--navy-blue);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .menu-link:active,
+  .menu-link:hover,
+  .menu-link:focus {
+    color: var(--pressed-state);
+  }
+  
+  .contakt {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    margin-left: auto;
+  }
+  .current {
+    position: relative;
+  }
+  
+  .current:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -28px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--pressed-state);
+  }
+
+  .foot-tel{
+ 
+  text-align: start;
+}
   .team-card {
     display: flex;
     row-gap: 64px;
@@ -901,11 +964,47 @@ align-items: center;
   column-gap: 24px;
 }
 
+.container-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap:72px 24px;
+  padding-left: 108px;
+  padding-right: 108px;
+}
+.foot-title {
+ 
+  text-align: start;
+}
+
+.mail-footer{
+  
+  /* width: 264px; */
+}
+.mail-buttom {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  align-items: start;
+  }
+  .footer-form-input-wrap{  
+   
+  margin-bottom: 0;
+  }
+  .footer-form-input {
+    max-width: 100%;
+    width: 264px;
+    
+  }
+  .footer-form-submit{
+    margin-left: 0;
+  }
+  
 }
 
 
 @media screen and (min-width:1158px){
   .container{
+    align-items: start;
     width: 1158px;
   }
   .team-card {
@@ -946,4 +1045,18 @@ align-items: center;
   display: flex;
   gap: 24px;
 }
+.container-foot {
+  display: flex;
+ gap: 0;
+  flex-wrap: nowrap;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.marg-rigth{
+  margin-right: 120px;
+}
+.footer-soc {
+ margin-right: 80px;
+}
+
 }

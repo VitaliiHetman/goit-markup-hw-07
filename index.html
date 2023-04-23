@@ -27,7 +27,7 @@
 
   <body class="body">
     <!--HEADER-->
-    <!-- <header class="pg-header">
+<header class="pg-header">
       <div class="container ph-container">
         <nav class="page-nav">
           <a class="logo-left link west" href="./index.html"
@@ -69,12 +69,31 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="menu-open-btn">
+        <svg width="32" height="32">
+          <use href="./images/icons.svg#menu"></use>
+        </svg>
+        </button>
       </div>
-    </header> -->
+
+      <div class="mob-menu">
+        <button
+          type="button"
+          data-menu-close
+          class="menu-close-btn"
+        >
+          <svg width="8px" height="8px">
+            <use
+              href="./images/icons.svg#icon-close-black"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </header> 
     <!--MAIN-->
-    <main>
+     <main>
       <!--hero-->
-      <!-- <section class="hero-background bg-container">
+  <!-- <section class="hero-background bg-container">
         <div class="container">
           <h1 class="hero-title">
             Effective Solutions for Your Business
@@ -83,9 +102,9 @@
             Order Service
           </button>
         </div>
-      </section> -->
+      </section>  -->
       <!--FEATURE-->
-      <!-- <section class="section">
+    <!-- <section class="section">
         <div class="container cont-fea">
           <h2 class="title-second" hidden>Feature</h2>
           <ul class="list text-fea">
@@ -149,9 +168,9 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>  -->
       <!--What are we doing-->
-  <!-- <section class="section section-p">
+ <!-- <section class="section section-p">
         <div class="container">
           <h2 class="title-second">What are we doing</h2>
           <ul class="list text-fea">
@@ -183,7 +202,7 @@
         </div>
       </section> -->
       <!-- Our Team -->
-      <!-- <section class="team section">
+<!-- <section class="team section">
         <div class="container">
           <h2 class="title-second">Our Team</h2>
           <ul class="list team-card">
@@ -457,8 +476,8 @@
             </li>
           </ul>
         </div>
-      </section> -->
-       <section class="section">
+      </section>   -->
+        <!-- <section class="section">
       <div class="container">
           <h2 class="title-second customers">Customers</h2>
           <ul class="list compane-list">
@@ -542,15 +561,15 @@
             </li>
           </ul>
         </div>
-      </section> 
-    </main>
+      </section> -->
+    </main> 
 
     <!-- FOOTER -->
 
-    <!-- <footer class="background-footer">
+     <!-- <footer class="background-footer">
       <div class="container container-foot">
-        <div>
-          <a class="logo-left link" href="./index.html"
+        <div class="marg-rigth">
+          <a class="logo-left foot-tel link" href="./index.html"
             >Web<span class="logo-right-footer">Studio</span>
           </a>
           <p class="text-footer">
@@ -617,7 +636,7 @@
         </div>
 
         
-        <div>
+        <div class="mail-footer">
           <h4 class="foot-title">Subscribe</h4>
           <form class="mail-buttom">
                <label>
@@ -645,7 +664,7 @@
         </div>
       </div>
       
-    </footer> -->
+    </footer>  -->
     <!-- MODAL -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -750,6 +769,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mob-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
