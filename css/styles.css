@@ -142,18 +142,106 @@ display: none;
   
 }
 
-.mob-menu{
+
+.mob-menu.is-open{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+
+
+} 
+.mob-menu-bacdrop{
   position: fixed;
+  top: 0;
+  left: 0;
+
   width: 100%;
   height: 100%;
-  max-height: 796px;
-  z-index: 100;
+  z-index: inherit;
+
+  
+  
+  /* width: 100vw; */
+  /* height: 100vh; */
+  
+  background-color:rgba(0, 0 ,0, 0.7);
+}
+.mob-menu{
+  display: flex;  
+   justify-content: space-between; 
+   padding: 80px 35px 40px 40px; 
+   flex-direction: column; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* max-height: 796px; */
+  /* z-index: 100; */
   top:0;
   left: 0;
   background-color: var(--white-background);
-  opacity: 0;
+  /* opacity: 0;
   visibility: hidden;
-  pointer-events: none;
+  pointer-events: none; */
+  
+} 
+.menu-text{
+  font-weight: 700;
+font-size: 36px;
+line-height: 40px;
+letter-spacing: 0.02em;
+color: #2E2F42;
+}
+
+.menu-close-btn {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 24px;
+  right: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--text-footer);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.lisst-menu-text{
+  display: inline;
+
+}
+.menu-text-tel{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+letter-spacing: 0.02em;
+  color: #4D5AE5;
+
+  
+}
+.list-mod-menu-adr:not(:last-child){
+  margin-bottom: 40px;
+}
+.team-soc-item-menu{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.menu-text-mail{
+  font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0.02em;
+color: #434455;
+}
+.list-mod-menu:not(:last-child){
+  margin-bottom: 40px;
 }
 
 /* ================================Hero============================ */
@@ -331,9 +419,9 @@ letter-spacing: 0.02em;
 }
 
 .team-soc-link {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
+   width: 100%;
+  height: 100%; 
+    border-radius: 50%;
   background-color: var(--primary-brand);
   display: flex;
   justify-content: center;
@@ -893,7 +981,9 @@ align-items: center;
     display: flex;
     align-items: center;
   }
-  
+  .menu-open-btn{
+    display: none;
+  }
   
   
   .menu-link {
