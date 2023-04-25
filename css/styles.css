@@ -80,6 +80,7 @@ display: none;
 
 /* =====================================Header==================================== */
 .pg-header {
+  height: 70px;
   padding-top: 24px;
   padding-bottom: 24px;
   border: 1px solid var(--text-footer);
@@ -253,14 +254,20 @@ color: #434455;
 
 .bg-container {
   background-image: var(--bg-gradient),
-    url(../images/people-office.jpg);
+    url(../images/mobail/people-office-tel.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
-  padding: 188px 0;
-  max-width: 1440px;
+  /* padding: 188px 0;  */
+  /* max-width: 1440px; */
+}
+
+@media (min-device-pixel-ratio: 2),(min-resolution:192dpi), (min-resolution:2dppx) { 
+  .bg-container {
+    background-image: var(--bg-gradient),
+      url(../images/mobail/people-office-tel2x@.jpg);}
 }
 
 .hero-title {
@@ -951,8 +958,23 @@ margin-bottom: 16px;
   
 /* --------------Adapt------------------- */
 
-@media screen and (max-width:768px){
-  
+@media screen and (min-width:480px){
+  .bg-container {
+    background-image: var(--bg-gradient),
+      url(../images/tablet/people-office-tab.jpg);
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 188px 0; */
+    /* max-width: 1440px; */
+  }
+  @media (min-device-pixel-ratio: 2),(min-resolution:192dpi), (min-resolution:2dppx) { 
+    .bg-container {
+      background-image: var(--bg-gradient),
+        url(../images/tablet/people-office-tab2x@.jpg);}
+  }
 } 
 
 @media screen and (min-width:768px)  {
@@ -960,11 +982,35 @@ margin-bottom: 16px;
 width: 768px;
 align-items: center;
   }
+
+  .pg-header{
+    height: 92px;
+  }
   .menu {
     display: flex;
     align-items: center;
   }
+ .pad-bot{
+  padding-bottom: 12px;
+ }
+  .bg-container {
+    background-image: var(--bg-gradient),
+      url(../images/people-office.jpg);
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 188px 0; */
+    max-width: 1440px;
+  }
+  @media (min-device-pixel-ratio: 2),(min-resolution:192dpi), (min-resolution:2dppx) { 
+    .bg-container {
+      background-image: var(--bg-gradient),
+        url(../images/people-office-1desk2x@.jpg);}
+  }
   
+
   /* position: absolute;
   width: 48px;
   height: 4px;
@@ -976,7 +1022,7 @@ align-items: center;
   .menu-item:not(:last-child) {
     margin-right: 40px;
   }
-  
+ 
   .addr {
     display: flex;
     align-items: center;
@@ -1002,6 +1048,7 @@ align-items: center;
   }
   
   .contakt {
+    display: block;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -1010,10 +1057,21 @@ align-items: center;
     color: var(--text);
     margin-left: auto;
   }
+ 
+  .addr {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: column;
+
+  }
   .current {
     position: relative;
   }
-  
+  .menu-item-tab{ 
+    margin-right: 0;
+  }
   .current:after {
     content: "";
     position: absolute;
@@ -1097,9 +1155,24 @@ align-items: center;
     align-items: start;
     width: 1158px;
   }
+  .pg-header{
+    height: 74px;
+  }
   .team-card {
  
    gap: 24px;
+  }
+  .menu-item-tab:not(:last-child){ 
+    margin-right:40px;
+  }
+ 
+  
+  .addr {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-left: auto;
+    flex-direction: row;
   }
   .icon {
     display: flex;
