@@ -41,8 +41,6 @@ img {
 
 .list {
   list-style: none;
-  display: flex;
-  justify-content: center;
 }
 .link {
   text-decoration: none;
@@ -60,17 +58,20 @@ button {
 }
 
 .container {
+  min-width: 320px;
   /* width: 1158px; */
-  max-width: 100%;
- width: 480px;
+  /* max-width: 100%;
+ width: 480px; */
   margin: 0 auto;
  padding-left: 15px;
   padding-right: 15px;
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .section-p {
@@ -80,7 +81,7 @@ display: none;
 
 /* =====================================Header==================================== */
 .pg-header {
-  height: 70px;
+  /* height: 70px; */
   padding-top: 24px;
   padding-bottom: 24px;
   border: 1px solid var(--text-footer);
@@ -130,6 +131,10 @@ display: none;
 }
 
 .addr{
+  display: none;
+}
+
+.contakt-addr{
   display: none;
 }
 
@@ -221,16 +226,19 @@ color: #2E2F42;
   line-height: 40px;
 letter-spacing: 0.02em;
   color: #4D5AE5;
-
-  
 }
+
 .list-mod-menu-adr:not(:last-child){
   margin-bottom: 40px;
 }
 .team-soc-item-menu{
   display: flex;
-  justify-content: space-between;
+  gap: 56px;
+  display: flex;
+  justify-content: center;
 }
+  /* justify-content: space-between; */
+
 
 
 
@@ -248,7 +256,7 @@ color: #434455;
 /* ================================Hero============================ */
 .hero-background {
   background: #2e2f42;
-  padding: 188px 0;
+  /* padding: 188px 0; */
   text-align: center;
 }
 
@@ -260,7 +268,7 @@ color: #434455;
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
-  /* padding: 188px 0;  */
+  padding: 112px 0; 
   /* max-width: 1440px; */
 }
 
@@ -272,7 +280,17 @@ color: #434455;
 
 .hero-title {
   font-weight: 700;
-  font-size: 56px;
+  font-size: 36px;
+line-height: 40px;
+text-align: center;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+color: var(--white-background);
+margin-bottom: 72px;
+margin-left: auto;
+  margin-right: auto;
+  max-width: 320px;
+  /* font-size: 56px;
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
@@ -280,7 +298,7 @@ color: #434455;
   margin-bottom: 48px;
   max-width: 496px;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
 }
 
 .button {
@@ -316,9 +334,7 @@ color: #434455;
   color: var(--navy-blue);
   margin-bottom: 72px;
 }
-.cont-fea{
 
-}
 .text-fea {
   /* display: flex;
   gap: 24px; */
@@ -333,7 +349,7 @@ color: #434455;
   color: var(--text);
 }
 
-.cours-colum{
+.cours-colum:not(:last-child){
   margin-bottom: 72px;
 }
 
@@ -362,7 +378,17 @@ color: #434455;
 .title-thirt-tel{
   text-align: center;
   margin-bottom: 8px;
-  max-width: 396px;
+  /* max-width: 396px; */
+}
+
+.title-team-name{
+  font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.02em;
+color: #2E2F42;
+
 }
 .text-feature{
   
@@ -391,9 +417,11 @@ letter-spacing: 0.02em;
 }
 .team-card {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   /* gap: 24px; */
   row-gap: 72px;
+
 }
 .card {
   padding: 32px 16px;
@@ -476,10 +504,13 @@ letter-spacing: 0.02em;
   margin-bottom: 72px;
 }
 .compane-list {
+  display: flex;
+  justify-content: center;
  flex-wrap: wrap;
   row-gap: 72px;
   column-gap: 16px;
 }
+
 
 .company-list-link {
   display: flex;
@@ -487,7 +518,7 @@ letter-spacing: 0.02em;
   align-items: center;
   border: 1px solid var(--subtle-text);
   border-radius: 4px;
-  width: 168px;
+  width: 190px;
   height: 88px;
   fill: var(--subtle-text);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -958,7 +989,18 @@ margin-bottom: 16px;
   
 /* --------------Adapt------------------- */
 
-@media screen and (min-width:480px){
+@media screen and (min-width:428px){
+ 
+  .container {
+    
+    /* width: 1158px; */
+    /* max-width: 100%; */
+   width: 428px;
+    margin: 0 auto;
+   padding-left: 15px;
+    padding-right: 15px;
+  }
+  
   .bg-container {
     background-image: var(--bg-gradient),
       url(../images/tablet/people-office-tab.jpg);
@@ -1004,13 +1046,25 @@ align-items: center;
     padding: 188px 0; */
     max-width: 1440px;
   }
+
   @media (min-device-pixel-ratio: 2),(min-resolution:192dpi), (min-resolution:2dppx) { 
     .bg-container {
       background-image: var(--bg-gradient),
         url(../images/people-office-1desk2x@.jpg);}
   }
   
-
+.hero-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--white-background);
+  margin-bottom: 48px;
+  max-width: 496px;
+  margin-left: auto;
+  margin-right: auto;
+}
   /* position: absolute;
   width: 48px;
   height: 4px;
@@ -1031,7 +1085,7 @@ align-items: center;
     display: none;
   }
   
-  
+ 
   .menu-link {
     font-weight: 500;
     font-size: 16px;
@@ -1039,6 +1093,19 @@ align-items: center;
     letter-spacing: 0.02em;
     color: var(--navy-blue);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-link-adr{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.04em;
+    color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .menu-link-adr:active,
+  .menu-link-adr:hover,
+  .menu-link-adr:focus {
+    color: var(--pressed-state);
   }
   
   .menu-link:active,
@@ -1098,18 +1165,30 @@ align-items: center;
     margin-bottom: 8px;
     
   }
-  .text-fea {
-    display: flex;
-    /* gap: 72px 24px; */
-  flex-wrap: wrap;
-  }
+ 
   .cours-colum{
+ 
     flex-basis: calc((100%-24px)/2);
     margin-bottom: 0;
+  }
+  .cours-colum:not(:last-child){
+    margin-bottom: 0;
+  }
+
+  .cont-fea{
+
+}
+  .text-fea {
+    display: flex;
+    flex-basis: calc((100%-24px)/2);
+  flex-wrap: wrap;
   }
   .compane-list {
    row-gap: 72px;
   column-gap: 24px;
+}
+.company-list-link{
+  width: 168px;
 }
 
 .container-foot {
@@ -1155,6 +1234,12 @@ align-items: center;
     align-items: start;
     width: 1158px;
   }
+
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    
+  }
   .pg-header{
     height: 74px;
   }
@@ -1165,7 +1250,9 @@ align-items: center;
   .menu-item-tab:not(:last-child){ 
     margin-right:40px;
   }
- 
+  .pad-bot{
+    padding-bottom: 0;
+   }
   
   .addr {
     display: flex;
@@ -1173,6 +1260,14 @@ align-items: center;
     margin-right: auto;
     margin-left: auto;
     flex-direction: row;
+  }
+  .menu-link-adr{
+    font-weight: 400;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.02em;
+  color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .icon {
     display: flex;
@@ -1189,6 +1284,9 @@ align-items: center;
     gap: 24px;
    flex-wrap: nowrap;
   }
+
+  .cours-colum{
+    margin-bottom: 72px;}
   .title-thirt {
   font-weight: 500;
   font-size: 20px;
